@@ -15,4 +15,8 @@ public class ToDueItemViewModel
 
     [Required]
     public DateTime DueDate { get; set; }
+
+    [Required]
+    [Range(0, 55)]
+    public int Difficulty { get; set; }
 }

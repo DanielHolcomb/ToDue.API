@@ -15,5 +15,18 @@ public class ToDueService : IToDueService
     public async Task<ToDueItem> CreateToDueItem(ToDueItem toDueItem)
     {
         var newToDueItem = await _toDueRepository.CreateToDueItemAsync(toDueItem);
+        return newToDueItem;
+    }
+
+    public async Task<List<ToDueItem>> GetTodaysToDueList()
+    {
+        var allToDueItems = await _toDueRepository.GetAllToDueItemsAsync();
+        var todaysToDueItems = new List<ToDueItem>();
+
+        //Logic for determining what should be today's todue items
+
+
+
+        return todaysToDueItems;
     }
 }
